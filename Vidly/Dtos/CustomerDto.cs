@@ -21,8 +21,7 @@ namespace Vidly.Dtos
 
         [DataType(DataType.Date)]
         //[BirthdateValidator(ErrorMessage = "Sorry, but cannot be over 110 or under 12")]
-        [Min18YearsIfAMember]
-
+        //[Min18YearsIfAMember]
         public DateTime? BirthDate { get; set; }
     }
 }
