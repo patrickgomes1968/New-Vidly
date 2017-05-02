@@ -16,10 +16,10 @@ namespace Vidly.Models
         public Genre Genre { get; set; }
         
         [Display(Name = "Release Date")]
-        public DateTime? ReleaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; }
 
         [Display(Name = "Date Added")]
-        public DateTime? DateAdded { get; set; }
+        public DateTime DateAdded { get; set; }
 
         [Range(1,25)]
         [Display(Name = "Number In Stock")]
