@@ -54,15 +54,15 @@ namespace Vidly
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "119403105292196",
+               appSecret: "1fdb808969bc6b61bf1750a59894c69c");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "873680926948-n7kjqacujh8tfn75v5a6tmgb2nn21rhk.apps.googleusercontent.com",
+                ClientSecret = "7oL0yd5HHtGntpYBl7-_OGds"
+            });
         }
     }
 }

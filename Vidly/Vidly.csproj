@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201705022235182_addDriverLicenseToUser.Designer.cs">
       <DependentUpon>201705022235182_addDriverLicenseToUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705050222514_addPhoneToUserModel.cs" />
+    <Compile Include="Migrations\201705050222514_addPhoneToUserModel.Designer.cs">
+      <DependentUpon>201705050222514_addPhoneToUserModel.cs</DependentUpon>
+    </Compile>
     <!--<Compile Include="Migrations\201704211658565_AddSubscribedToCustomers.cs" />
     <Compile Include="Migrations\201704211658565_AddSubscribedToCustomers.Designer.cs">
       <DependentUpon>201704211658565_AddSubscribedToCustomers.cs</DependentUpon>
@@ -248,12 +252,13 @@
       <DependentUpon>201704220339249_SeedGenre.cs</DependentUpon>
     </Compile>-->
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDBContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
     <!--<Compile Include="Models\BirthDateValidator.cs" />
     <Compile Include="Models\DateAddedValidator.cs" />-->
     <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfMember.cs" />
@@ -542,6 +547,9 @@
     <EmbeddedResource Include="Migrations\201705022235182_addDriverLicenseToUser.resx">
       <DependentUpon>201705022235182_addDriverLicenseToUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050222514_addPhoneToUserModel.resx">
+      <DependentUpon>201705050222514_addPhoneToUserModel.cs</DependentUpon>
+    </EmbeddedResource>
     <!--<EmbeddedResource Include="Migrations\201704211658565_AddSubscribedToCustomers.resx">
       <DependentUpon>201704211658565_AddSubscribedToCustomers.cs</DependentUpon>
     </EmbeddedResource>
@@ -588,7 +596,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49333</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49333/</IISUrl>
+          <IISUrl>https://localhost:44390/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
