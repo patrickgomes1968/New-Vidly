@@ -68,11 +68,6 @@ namespace Vidly.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Required]
-        [DataType(DataType.PhoneNumber)]
-        [StringLength(15)]
-        public string Phone { get; set; }
-
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }

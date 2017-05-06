@@ -8,7 +8,7 @@ using System.Data.Entity;
 namespace Vidly.Controllers
 {
 
-    [Authorize(Roles = RoleName.CanManageMovies)]
+    
     public class MoviesController : Controller
     {
         private ApplicationDbContext _context;
@@ -23,7 +23,7 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
-        [AllowAnonymous]
+        [Authorize]
         public ViewResult Index()
         {
             //var movies = _context.Movies.Include(m => m.Genre).ToList();
@@ -32,7 +32,7 @@ namespace Vidly.Controllers
             return View("ReadOnlyList");
         }
 
-        [AllowAnonymous]
+        [Authorize]
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
@@ -43,6 +43,7 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
@@ -66,6 +67,7 @@ namespace Vidly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)

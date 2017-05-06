@@ -6,7 +6,7 @@ using Vidly.ViewModels;
 using System.Data.Entity;
 
 namespace Vidly.Controllers
-{
+{   
     public class CustomersController : Controller
     {
         private ApplicationDbContext _context;
@@ -73,8 +73,11 @@ namespace Vidly.Controllers
             };
             return View("CustomerForm", viewModel);
         }
+
+        [OutputCache(Duration = 20 , Location = System.Web.UI.OutputCacheLocation.Server)]
         public ViewResult Index()
         {
+            //var customers = _context.Customers.ToList();
            return View();
         }
 

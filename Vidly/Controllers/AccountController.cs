@@ -167,7 +167,7 @@ namespace Vidly.Controllers
                     //var roleManager = new RoleManager<IdentityRole>(roleStore);
                     //await roleManager.CreateAsync(new IdentityRole("CanManageMovies"));
                     //await UserManager.AddToRoleAsync(user.Id, "CanManageMovies");
-                    
+
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
